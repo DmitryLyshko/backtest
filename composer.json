@@ -1,0 +1,28 @@
+{
+    "name": "dmitry/backtest",
+    "description": "worker",
+    "authors": [
+        {
+            "name": "Dmitry Lyashko",
+            "email": "dr-westa@ya.ru"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Flagmer\\": "src/Flagmer",
+            "Task\\": "src/Task"
+        }
+    },
+    "require": {
+        "qxsch/worker-pool": "dev-master",
+        "monolog/monolog": "^2.0@dev",
+        "vlucas/phpdotenv": "^5.0@dev"
+    },
+    "config": {
+        "platform": {
+            "ext-pcntl": "7.4",
+            "ext-posix": "7.4"
+        }
+    }
+}
