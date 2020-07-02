@@ -12,5 +12,6 @@ RUN apt-get install -y libfreetype6-dev libjpeg62-turbo-dev libpng-dev
 
 WORKDIR /app
 COPY . /app
-RUN composer update
+RUN composer install
+RUN composer dump-autoload --optimize
 CMD ["php", "App.php", "--filename=tasks.json", "--type=file"]
